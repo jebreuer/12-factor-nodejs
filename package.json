@@ -1,0 +1,11 @@
+{
+  "name": "12-factor-nodejs",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.19.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongodb": "^5.1.0"
+  }
+}

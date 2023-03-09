@@ -1,0 +1,7 @@
+---
+applications:
+- name: 12-factor-nodejs
+  command: node server.js
+  memory: 256M
+  instances: 1
+  random-route: true

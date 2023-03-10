@@ -2,8 +2,7 @@ const { MongoClient } = require('mongodb')
 const express = require('express')
 const app = express()
 
-const vcap_services = JSON.parse(process.env.VCAP_SERVICES)
-const mongodb_uri = vcap_services['stackit-mongodb']?.at(0)?.credentials?.uri
+const mongodb_uri = process.env.MONGODB_URI
 
 if (!mongodb_uri) {
   console.error('FATAL: No mongodb URI found!')

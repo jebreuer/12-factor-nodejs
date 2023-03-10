@@ -1,0 +1,20 @@
+containers: {
+  app: {
+    build: "."
+    env: {
+      "MONGODB_URI": "mongodb://root:acorn@mongodb:27017/guestbook?authSource=admin"
+    }
+    dependsOn: [
+      "mongodb",
+    ]
+    ports: publish: "4000/http"
+  }
+  mongodb: {
+    image: "mongo:6.0.4"
+    env: {
+      "MONGO_INITDB_ROOT_USERNAME": "root"
+      "MONGO_INITDB_ROOT_PASSWORD": "acorn"
+    }
+    ports: "27017/tcp"
+  }
+}
